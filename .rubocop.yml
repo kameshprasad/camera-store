@@ -1,0 +1,13 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - lib/secret_server.rb
+    - lib/tasks/*.rake
+    - db/migrate/*.rb
+    - Rakefile
+    - Gemfile
+    - config/**/*
+    - bin/spring
+    - spec/factories/*
