@@ -4,18 +4,16 @@ default: &default
   timeout: 300
   encoding: utf8
   host: localhost
+  user: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
 
 development:
   <<: *default
   database: camera-store-development
-  user: kptest
-  password: myway123
 
 test:
   <<: *default
   database: camera-store-test
-  user: kptest
-  password: myway123
 
 production:
   <<: *default

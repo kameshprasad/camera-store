@@ -1,7 +1,12 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   devise_for :users
+
+  # Root path
+  root to: "admin/dashboard#index"
   
   # Mobile/External exposed apis
   namespace :api, defaults: { format: :json } do
@@ -20,5 +25,10 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :categories
     resources :products
+  end
+
+  # Letter opener
+  if Rails.env.development? || Rails.env.test?
+    mount LetterOpenerWeb::Engine, at: '/letter_opener'
   end
 end

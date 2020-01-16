@@ -3,8 +3,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.3'
+ruby '2.6.0'
 
+# Managing environments
+gem 'dotenv-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Use postgresql as the database for Active Record
@@ -22,6 +24,12 @@ gem 'jbuilder', '~> 2.7'
 
 # User Authentication Library
 gem 'devise'
+# For quick access admin panel
+gem 'activeadmin'
+
+# OAuth2+OpenID Identity Provider
+# gem 'doorkeeper' # Already installed as Devise dependency
+gem 'doorkeeper-openid_connect'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -29,6 +37,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'letter_opener_web', '~> 1.0'
 end
 
 group :development do
