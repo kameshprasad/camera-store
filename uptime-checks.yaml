@@ -17,9 +17,6 @@ tags:
   - name: DC health checks
     description: Checks for IDfy's Double check platform
 
-  - name: Eve healt checks
-    description: Checks for IDfy's Eve APIs
-
 paths:
   /health:
     get:
