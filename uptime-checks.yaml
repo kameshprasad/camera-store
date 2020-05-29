@@ -11,14 +11,20 @@ info:
     altText: IDfy logo
 
 servers:
-  url: https://api.clients.idfy.com/health
+  - url: https://api.clients.idfy.com/health
 
 tags:
-  name: Getting started
-  description: Test
+  - name: DC health checks
+    description: Checks for IDfy's Double check platform
 
-  name: DC health checks
-  description: Checks for IDfy's Double check platform
+  - name: Eve healt checks
+    description: Checks for IDfy's Eve APIs
 
-  name: Eve healt checks
-  description: Checks for IDfy's Eve APIs
+paths:
+  /health:
+    get:
+      summary: One point to get for health check at single point
+      description: test
+      responses:
+        '200':
+          description: Successful
