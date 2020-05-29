@@ -1,0 +1,30 @@
+openapi: 3.0.0
+
+# metadata information
+info:
+  version: 1.0
+  title: Uptime checks
+  description: |
+    IDfy’s Uptime check APIs enable client to ability to monitor IDfy applications and services.
+  x-logo:
+    url: 'images/logo.png'
+    altText: IDfy logo
+
+servers:
+  - url: https://api.clients.idfy.com/health
+
+tags:
+  - name: DC health checks
+    description: Checks for IDfy's Double check platform
+
+  - name: Eve healt checks
+    description: Checks for IDfy's Eve APIs
+
+paths:
+  /health:
+    get:
+      summary: One point to get for health check at single point
+      description: test
+      responses:
+        '200':
+          description: Successful
