@@ -75,7 +75,7 @@ GEM
     ast (2.4.0)
     bcrypt (3.1.13)
     bcrypt (3.1.13-java)
-    bindata (2.4.4)
+    bindata (2.4.10)
     bindex (0.8.1)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
